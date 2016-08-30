@@ -76,15 +76,16 @@ int main (int argc, char* argv[])
 	} 
 
 	fclose(fp_inputdeck);
+	fclose(fp_out);
 	
 	fp_gnuplot = fopen("plot.gnu","w");
 
 	fprintf(fp_gnuplot,"set term png\n");
 	fprintf(fp_gnuplot,"set output \"result.png\"\n");
 	fprintf(fp_gnuplot,"set xrange[-6:6]\n");
-      fprintf(fp_gnuplot,"set yrange[-50:50]\n");
+      	fprintf(fp_gnuplot,"set yrange[-50:50]\n");
 	fprintf(fp_gnuplot,"plot 'result.oneD' using 1:2 with lines\n");
 	fclose(fp_gnuplot);
-
+	
 	return 0;
 }
