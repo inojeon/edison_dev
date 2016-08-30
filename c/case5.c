@@ -59,6 +59,8 @@ int main (int argc, char* argv[])
 		}
 	}
 
+	fclose(fp_inputdeck);
+	
 	printf("int1: %d \n", int1);
 	printf("real1: %f \n", real1);
 
@@ -79,7 +81,6 @@ int main (int argc, char* argv[])
 		fprintf(fp_out,"%10.3f	%10.3f\n",x, y);
 	} 
 
-	fclose(fp_inputdeck);
 	fclose(fp_out);
 
 	return 0;
