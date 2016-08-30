@@ -58,6 +58,8 @@ int main (int argc, char* argv[])
 	printf("int1: %d \n", int1);
 	printf("real1: %f \n", real1);
 
+	fclose(fp_inputdeck);
+	
 	system("rm -rf result");
 	system("mkdir result");
 
@@ -75,7 +77,6 @@ int main (int argc, char* argv[])
 		fprintf(fp_out,"%e %e\n",x, y);
 	} 
 
-	fclose(fp_inputdeck);
 	fclose(fp_out);
 	
 	fp_gnuplot = fopen("plot.gnu","w");
