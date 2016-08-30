@@ -80,6 +80,7 @@ int main (int argc, char* argv[])
 	} 
 
 	fclose(fp_inputdeck);
+	fclose(fp_out);
 
 	return 0;
 }
